@@ -33,17 +33,17 @@ if (form && note) {
     const age = Number(form.childAge.value);
 
     if (!parent || !email || !form.childAge.value) {
-      note.textContent = "Please fill in name, email and your child's age.";
+      note.textContent = "Будь ласка, вкажіть ім'я, пошту та вік дитини.";
       note.className = "form-note err";
       return;
     }
     if (age < 5 || age > 15) {
-      note.textContent = "Our programs are for riders aged 5 to 15.";
+      note.textContent = "Наші програми — для райдерів віком від 5 до 15 років.";
       note.className = "form-note err";
       return;
     }
 
-    note.textContent = `Thanks ${parent.split(" ")[0]}! Your request is in — we'll email you within one business day. 🏍️`;
+    note.textContent = `Дякуємо, ${parent.split(" ")[0]}! Заявку отримано — ми напишемо вам протягом одного робочого дня. 🏍️`;
     note.className = "form-note ok";
     form.reset();
   });
