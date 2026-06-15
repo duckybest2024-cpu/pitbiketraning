@@ -16,12 +16,26 @@ plain HTML, CSS and JavaScript — no build step, no dependencies.
 
 ## Run locally
 
-Just open `index.html` in a browser, or serve the folder:
+Open `index.html` directly in a browser, or run the bundled server:
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+npm start          # serves on http://localhost:3000 (or $PORT)
 ```
+
+## Deploy to Railway
+
+This repo is Railway-ready. Two options:
+
+1. **Dashboard (no setup):** In Railway, choose **New Project → Deploy from GitHub repo**
+   and pick this repository / branch. Railway auto-detects Node via Nixpacks, runs
+   `npm start`, and serves the site. Click **Generate Domain** to get a public URL.
+2. **CLI:** With the Railway CLI installed and logged in:
+   ```bash
+   railway up
+   ```
+
+`server.js` binds to Railway's `$PORT` automatically, and `railway.json` sets the
+start command and restart policy.
 
 ## Files
 
@@ -30,6 +44,9 @@ python3 -m http.server 8000
 | `index.html` | Page markup and content |
 | `styles.css` | Styling, layout and responsive rules |
 | `script.js` | Mobile menu, footer year, booking form handling |
+| `server.js` | Zero-dependency static server (binds to `$PORT`) |
+| `package.json` | `npm start` script + Node engine |
+| `railway.json` | Railway build/deploy config |
 
 ## Notes
 

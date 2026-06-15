@@ -1,0 +1,12 @@
+{
+  "name": "little-riders-pit-bike-academy",
+  "version": "1.0.0",
+  "description": "Marketing website for a kids' pit bike training school.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
