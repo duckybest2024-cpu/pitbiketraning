@@ -80,6 +80,7 @@ img { max-width: 100%; }
   font-size: .95rem;
   margin: 0 0 1.4rem;
 }
+.notice-center { display: inline-block; margin: 1rem auto 0; }
 
 /* ===== Header / Nav ===== */
 .site-header {
